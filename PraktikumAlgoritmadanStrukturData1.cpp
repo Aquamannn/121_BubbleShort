@@ -58,5 +58,11 @@ void display() {
 
 int main() {
 
+    input(); 
+    bubbleShortArray();
+    display();
+    system("pause");
+
+    return 0;
     
 }
