@@ -20,8 +20,27 @@ void input() {
     cout << "Masukan elemen Array" << endl; // Output ke layar
     cout << "=====================" << endl; // Output ke layar 
 
-    for (int j = 0; i < n; i++) { // Looping dengan i dimulai dari 0 hingga n-1
+    for (int i = 0; i < n; i++) { // Looping dengan i dimulai dari 0 hingga n-1
         cout << "data ke-" << (i + 1) << ": "; // Output ke layar
         cin >> a[i]; // Input dari pengguna 
     }
+}
+
+void bubbleShortArray() { // procedur untuk mengurutkan array dengan metode bubble short
+    int pass = 1; // step 1
+
+    do {
+        for (int j = 0; j <= n - 1 - pass; j++) { // step 2
+
+            if (a[j] > a[j + 1]) {
+                int temp;
+                temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+        pass = pass + 1; // step 4
+     
+    } while (pass <= n - 1); //step 5
+
 }
